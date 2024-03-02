@@ -71,6 +71,24 @@ nav {
   align-items: center;
 }
 
+.about-paragraph {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify; /* or left */
+  line-height: 1.5; /* adjust as needed */
+  margin: 20px auto; /* adjust margin and center the paragraph horizontally */
+  color: #333; /* adjust color as needed */
+  width: 80%; /* set the width of the paragraph */
+}
+
+.highlighted-text {
+  color: #69cfcf; /* Change the color to the desired one */
+}
+
+.space {
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+
 @media only screen and (max-width: 1024px) {
   header .nav-btn {
     visibility: visible;

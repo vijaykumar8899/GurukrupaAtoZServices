@@ -1,7 +1,7 @@
 import React from "react";
 import "../Styles/main.css";
 
-const title = () => {
+const Title = () => {
   return (
     <div>
       <h1 className="title">GurukrupaAtoZServices</h1>
@@ -9,4 +9,4 @@ const title = () => {
   );
 };
 
-export default title;
+export default Title;

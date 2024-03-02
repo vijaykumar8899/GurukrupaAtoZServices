@@ -1,4 +1,5 @@
 import Container from "./container";
+import "../Styles/main.css";
 
 function OurServices() {
   return (
@@ -16,6 +17,8 @@ function OurServices() {
           <Container title="six" />
         </div>
       </div>
+      <div className="space"></div>
+      <div className="space"></div>
     </div>
   );
 }

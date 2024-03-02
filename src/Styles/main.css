@@ -54,7 +54,7 @@ nav {
 }
 
 .title {
-  font-size: 50px;
+  font-size: 40px;
   color: #69cfcf;
   padding: 10px 0;
 }
@@ -68,6 +68,7 @@ nav {
 .container-row {
   display: flex;
   justify-content: center; /* Adjust as needed */
+  align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -103,5 +104,15 @@ nav {
 
   nav a {
     font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-row {
+    flex-direction: column;
   }
 }

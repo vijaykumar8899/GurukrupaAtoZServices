@@ -4,7 +4,7 @@ import "../Styles/main.css";
 const AboutUs = () => {
   return (
     <div>
-      <h2 className="title">About Us</h2>
+      <h2 className="our-services-heading">About Us</h2>
       <p className="about-paragraph">
         Welcome to{" "}
         <strong className="highlighted-text">Gurukrupa AtoZ Services</strong>,

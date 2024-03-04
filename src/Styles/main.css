@@ -126,6 +126,10 @@ nav {
   .title {
     font-size: 30px;
   }
+
+  .our-services-heading {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 600px) {

@@ -7,6 +7,7 @@ import AboutUs from "./components/about-us";
 import Bio from "./components/bio";
 import AtoZDifference from "./components/difference";
 import ContactMe from "./components/contactMe";
+import YoutubeDisplayComponent from "./components/youtubeDisplayComponent";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       <Title />
       <AboutUs />
       <OurServices />
-     
+
       <Bio />
       <AtoZDifference />
+      <YoutubeDisplayComponent />
       <ContactMe />
     </React.Fragment>
   );

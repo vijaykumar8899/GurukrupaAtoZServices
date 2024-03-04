@@ -18,6 +18,8 @@
   flex-direction: column;
   margin-left: 10px; /* space between each container*/
   margin-bottom: 10px;
+
+  position: relative;
 }
 
 #containerImage {
@@ -62,9 +64,8 @@
   overflow: hidden; /* Hide any overflow */
 }
 
-.text p{
-  display:flex;
-  
+.text p {
+  display: flex;
 }
 
 .text-container button {
@@ -90,4 +91,46 @@
 .text-container button:hover {
   /* background-color: #000000; */
   color: #fff;
+}
+
+/* here */
+
+.additional-info {
+  display: none;
+  position: absolute;
+  top: calc(10%); /* Position it just below the container */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* semi-transparent white background */
+  border: 2px solid #007055; /* border color */
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px; /* Adjust width as needed */
+  z-index: 1; /* Ensure it's above the container */
+  text-align: left; /* Align text to the left */
+}
+
+.container:hover .additional-info {
+  display: block;
+}
+
+
+.additional-info ul {
+  list-style: none; /* Remove default list styles */
+  counter-reset: list-counter; /* Reset the counter for numbering */
+}
+
+.additional-info li {
+  counter-increment: list-counter; /* Increment the counter for each list item */
+}
+
+.additional-info li::before {
+  content: counter(list-counter) ". "; /* Display the counter number followed by a period */
+  font-weight: bold; /* Optionally make the numbers bold */
+  margin-right: 5px; /* Add some space between the number and the text */
 }

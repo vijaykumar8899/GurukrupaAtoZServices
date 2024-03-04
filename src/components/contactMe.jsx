@@ -11,7 +11,7 @@ import "../Styles/contactMe.css";
 
 const ContactMe = () => {
   return (
-    <div className="contact-me-container">
+    <div id="contact-me-container">
       <h2 className="our-services-heading">Contact Me</h2>
       <div className="contact-methods">
         <div className="contact-methods-row">

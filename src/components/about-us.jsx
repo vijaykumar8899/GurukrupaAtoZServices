@@ -3,7 +3,7 @@ import "../Styles/main.css";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div id="home">
       <h2 className="our-services-heading">About Us</h2>
       <p className="about-paragraph">
         Welcome to{" "}

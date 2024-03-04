@@ -5,7 +5,7 @@ import "../Styles/youtubeDisplayComponent.css";
 
 const YoutubeDisplayComponent = () => {
   return (
-    <div className="youtube-container">
+    <div className="youtube-Display-container">
       <h2 className="section-title">Explore Our Services</h2>
       <p className="section-description">
         Check out our services and see what we have to offer.

@@ -25,7 +25,7 @@ header {
   color: var(--textColor);
   height: 60px;
   padding: 0 2rem;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -150,17 +150,42 @@ nav {
 
   .title {
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
   }
 
   .our-services-heading {
     font-size: 20px;
   }
+
+  #home {
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .about-paragraph {
+    text-align: justify; /* or left */
+    margin: 20px auto; /* adjust margin and center the paragraph horizontally */
+    color: #333; /* adjust color as needed */
+    width: 90%; /* set the width of the paragraph */
+  }
+
+  header {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .container-row {
     flex-direction: column;
+  }
+
+  .our-services-heading {
+    font-size: 20px;
   }
 }

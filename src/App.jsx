@@ -8,6 +8,7 @@ import Bio from "./components/bio";
 import AtoZDifference from "./components/difference";
 import ContactMe from "./components/contactMe";
 import YoutubeDisplayComponent from "./components/youtubeDisplayComponent";
+import ScrollUpButton from "./components/scroll-up-button";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Bio />
       <AtoZDifference />
       <YoutubeDisplayComponent />
+      <ScrollUpButton />
       <ContactMe />
     </React.Fragment>
   );

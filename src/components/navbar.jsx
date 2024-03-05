@@ -1,23 +1,17 @@
 import { useEffect, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
+import Scroll from "../HelperFunctions/scroll";
 
 function Navbar() {
   const navRef = useRef();
 
-  const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+  const handleContactClick = (id) => {
+    Scroll.scrollToElementById(id);
   };
 
-  const handleClick = (anchor) => () => {
-    const id = `${anchor}`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");
   };
 
   // Handle header show/hide animation depending on the scroll direction
@@ -50,20 +44,20 @@ function Navbar() {
   }, []);
 
   return (
-    <header>
+    <header id="navbar">
       {/* <h3>LOGO</h3> */}
       <img src="assets/logo1.png" alt="logo" />
       <nav ref={navRef}>
-        <a onClick={handleClick("home")} href="/#">
+        <a onClick={() => handleContactClick("home")} href="/#">
           Home
         </a>
-        <a href="#about" onClick={handleClick("about-us")}>
+        <a href="#about" onClick={() => handleContactClick("about-us")}>
           About
         </a>
-        <a href="/#services" onClick={handleClick("our-services")}>
+        <a href="/#services" onClick={() => handleContactClick("our-services")}>
           Services
         </a>
-        <a href="/#contact" onClick={handleClick("contact-me-container")}>
+        <a href="/#contact" onClick={() => handleContactClick("contact-me-container")}>
           Contact
         </a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>

@@ -4,7 +4,9 @@ import "../Styles/main.css";
 const Title = () => {
   return (
     <div>
-      <h1 className="title">GurukrupaAtoZServices</h1>
+      <h1 id="title" className="title">
+        GurukrupaAtoZServices
+      </h1>
     </div>
   );
 };

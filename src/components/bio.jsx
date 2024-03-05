@@ -1,17 +1,9 @@
-import { useEffect, useRef } from "react";
 import "../Styles/bio.css";
-import Navbar from "./navbar";
+import Scroll from "../HelperFunctions/scroll";
 
 const Bio = () => {
-  const handleClick = (anchor) => () => {
-    const id = `${anchor}`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+  const handleContactClick = () => {
+    Scroll.scrollToElementById("contact-me-container");
   };
   return (
     <div className="bio">
@@ -36,7 +28,7 @@ const Bio = () => {
             <a
               className="contact-scroll-button"
               href="#contactMe"
-              onClick={handleClick("contact-me-container")}
+              onClick={handleContactClick}
             >
               Contact
             </a>

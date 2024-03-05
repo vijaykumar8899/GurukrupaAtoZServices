@@ -25,7 +25,7 @@ const ScrollUpButton = () => {
   }, []);
 
   const handleClick = () => {
-    Scroll.scrollToElementById("title");
+    Scroll.scrollToElementById("navbar");
   };
 
   return (

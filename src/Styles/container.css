@@ -22,6 +22,10 @@
   position: relative;
 }
 
+#our-services {
+  margin-bottom: 10px;
+}
+
 #containerImage {
   height: 30%;
   width: 50%;

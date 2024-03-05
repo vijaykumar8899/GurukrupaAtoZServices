@@ -24,14 +24,14 @@ const ScrollUpButton = () => {
     };
   }, []);
 
-  const handleScrollToTop = () => {
-    Scroll.scrollToElementById("navbar");
+  const handleClick = () => {
+    Scroll.scrollToElementById("title");
   };
 
   return (
     <button
       className={`scroll-to-top-button ${isVisible ? "visible" : "hidden"}`}
-      onClick={handleScrollToTop}
+      onClick={handleClick}
     >
       <div>
         <FaArrowUp />

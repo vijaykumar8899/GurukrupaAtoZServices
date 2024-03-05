@@ -1,17 +1,19 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/main.css";
 import Scroll from "../HelperFunctions/scroll";
 
 function Navbar() {
   const navRef = useRef();
+  const [isNavOpen, setIsNavOpen] = useState(false); // Track whether the navbar is open or closed
 
-  const handleContactClick = (id) => {
+  const handleClick = (id) => {
     Scroll.scrollToElementById(id);
+    setIsNavOpen(false); // Close the navbar after navigating to the section
   };
 
   const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+    setIsNavOpen(!isNavOpen); // Toggle the state of isNavOpen
   };
 
   // Handle header show/hide animation depending on the scroll direction
@@ -45,25 +47,29 @@ function Navbar() {
 
   return (
     <header id="navbar">
-      {/* <h3>LOGO</h3> */}
-      <img src="assets/logo1.png" alt="logo" />
-      <nav ref={navRef}>
-        <a onClick={() => handleContactClick("home")} href="/#">
-          Home
-        </a>
-        <a href="#about" onClick={() => handleContactClick("about-us")}>
-          About
-        </a>
-        <a href="/#services" onClick={() => handleContactClick("our-services")}>
-          Services
-        </a>
-        <a href="/#contact" onClick={() => handleContactClick("contact-me-container")}>
-          Contact
-        </a>
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-          <FaTimes />
-        </button>
-      </nav>
+      <img className="left-context" src="assets/logo1.png" alt="logo" />
+      <div className="right-context">
+        <nav ref={navRef} className={isNavOpen ? "responsive_nav" : ""}>
+          <a onClick={() => handleClick("title")} href="/#">
+            Home
+          </a>
+          <a href="#about" onClick={() => handleClick("bio")}>
+            About
+          </a>
+          <a href="/#services" onClick={() => handleClick("our-services")}>
+            Services
+          </a>
+          <a
+            href="/#contact"
+            onClick={() => handleClick("contact-me-container")}
+          >
+            Contact
+          </a>
+          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+            <FaTimes />
+          </button>
+        </nav>
+      </div>
       <button className="nav-btn" onClick={showNavbar}>
         <FaBars />
       </button>

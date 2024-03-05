@@ -6,7 +6,7 @@ const Bio = () => {
     Scroll.scrollToElementById("contact-me-container");
   };
   return (
-    <div className="bio">
+    <div className="bio" id="bio">
       <div className="row">
         <div className="imgWrapper">
           <img src="assets\ravikiranimage1.jpg" alt="bio-img-ravikiran-garu" />

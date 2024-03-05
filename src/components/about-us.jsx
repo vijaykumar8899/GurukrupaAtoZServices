@@ -18,8 +18,6 @@ const AboutUs = () => {
         essential requirements.
       </p>
       <div className="space"></div>
-      <div className="space"></div>
-      <div className="space"></div>
     </div>
   );
 };

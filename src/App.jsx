@@ -14,6 +14,7 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
+      <div className="space"></div>
       <Title />
       <AboutUs />
       <OurServices />

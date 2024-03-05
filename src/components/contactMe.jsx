@@ -12,7 +12,7 @@ import "../Styles/contactMe.css";
 const ContactMe = () => {
   return (
     <div id="contact-me-container">
-      <h2 className="our-services-heading">Contact Me</h2>
+      <h2 className="our-services-heading">Contact Us</h2>
       <div className="contact-methods">
         <div className="contact-methods-row">
           <a href="tel:8317688004" target="_blank" rel="noopener noreferrer">

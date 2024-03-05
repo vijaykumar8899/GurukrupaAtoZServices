@@ -25,6 +25,15 @@ header {
   color: var(--textColor);
 }
 
+header img {
+  height: 30px;
+  width: 30px;
+}
+
+header img:hover {
+  transform: scale(1.25);
+}
+
 nav a {
   margin: 0 1rem;
   color: var(--textColor);
@@ -71,13 +80,23 @@ nav {
   align-items: center;
 }
 
+#home {
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .about-paragraph {
   font-family: Arial, Helvetica, sans-serif;
   text-align: justify; /* or left */
   line-height: 1.5; /* adjust as needed */
   margin: 20px auto; /* adjust margin and center the paragraph horizontally */
   color: #333; /* adjust color as needed */
-  width: 80%; /* set the width of the paragraph */
+  width: 60%; /* set the width of the paragraph */
 }
 
 .highlighted-text {
@@ -125,6 +144,8 @@ nav {
 
   .title {
     font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .our-services-heading {

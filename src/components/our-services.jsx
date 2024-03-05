@@ -1,5 +1,7 @@
 import Container from "./container";
 import "../Styles/main.css";
+import "../Styles/container.css";
+
 
 function OurServices() {
   const additionalInfo = {

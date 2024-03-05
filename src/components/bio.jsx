@@ -1,7 +1,18 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import "../Styles/bio.css";
+import Navbar from "./navbar";
 
 const Bio = () => {
+  const handleClick = (anchor) => () => {
+    const id = `${anchor}`;
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <div className="bio">
       <div className="row">
@@ -22,7 +33,13 @@ const Bio = () => {
               business, he is known for community service and philanthropy,
               driving GurukrupaAtoZServices' mission to make a positivity.
             </p>
-            <a href="#">Contact</a>
+            <a
+              className="contact-scroll-button"
+              href="#contactMe"
+              onClick={handleClick("contact-me-container")}
+            >
+              Contact
+            </a>
           </div>
         </div>
       </div>

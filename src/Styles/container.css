@@ -68,7 +68,8 @@
   display: flex;
 }
 
-.text-container button {
+.text-container button,
+.contact-scroll-button {
   font-family: "Bevan", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -88,7 +89,8 @@
   /* transition: background-color 0.3s, color 0.3s, border-color 0.3s; */
 }
 
-.text-container button:hover {
+.text-container button,
+.contact-scroll-button:hover {
   /* background-color: #000000; */
   color: #fff;
 }
@@ -118,7 +120,6 @@
 .container:hover .additional-info {
   display: block;
 }
-
 
 .additional-info ul {
   list-style: none; /* Remove default list styles */

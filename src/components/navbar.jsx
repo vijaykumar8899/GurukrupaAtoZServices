@@ -51,8 +51,8 @@ function Navbar() {
 
   return (
     <header>
-      <h3>LOGO</h3>
-      {/* <img src="assets/logo.png" alt="" /> */}
+      {/* <h3>LOGO</h3> */}
+      <img src="assets/logo1.png" alt="logo" />
       <nav ref={navRef}>
         <a onClick={handleClick("home")} href="/#">
           Home

@@ -35,6 +35,9 @@
   justify-content: center;
   align-items: center;
   padding-left: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
 }
 
 .row .contentWrapper span.textWrapper {

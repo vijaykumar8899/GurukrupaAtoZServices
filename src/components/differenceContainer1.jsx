@@ -11,7 +11,7 @@ const DifferenceContainer1 = ({ title = "", explanation = "" }) => {
         </div>
         <div className="sizedBox"></div>
 
-        <p>
+        <p className="right-arrow-p">
           {explanation}
         </p>
       </div>

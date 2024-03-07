@@ -10,6 +10,7 @@ const AboutUs = lazy(() => import("./components/about-us"));
 const Bio = lazy(() => import("./components/bio"));
 const AtoZDifference = lazy(() => import("./components/difference"));
 const ContactMe = lazy(() => import("./components/contactMe"));
+const Splash = lazy(() => import("./components/splash"));
 const YoutubeDisplayComponent = lazy(() =>
   import("./components/youtubeDisplayComponent")
 );
@@ -18,10 +19,11 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <div className="space"></div>
+
       <Suspense fallback={<div>Loading...</div>}>
         <Title />
         <AboutUs />
+
         <OurServices />
         <Bio />
         <AtoZDifference />

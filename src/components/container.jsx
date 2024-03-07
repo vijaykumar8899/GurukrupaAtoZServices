@@ -9,6 +9,7 @@ function Container({
 }) {
   return (
     <div className="container">
+      <div className="splash"></div>
       <img id="containerImage" src={image} alt="Your Image" />
       <br />
       <div className="additional-info">
@@ -20,7 +21,7 @@ function Container({
       </div>
       <div className="text-container">
         <div className="text">
-          <p>{title}</p>
+          <p className="text-p">{title}</p>
           <p>Consultancy</p>
         </div>
         <br />

@@ -20,6 +20,7 @@
   margin-bottom: 10px;
 
   position: relative;
+  overflow: hidden;
 }
 
 #our-services {
@@ -58,13 +59,13 @@
   line-height: 35px;
   /* letter-spacing: 0.15em; */
 
-  text-align: justify;
+  text-align: center;
   font-size: var(--font-size, 30px);
   font-weight: 500;
   color: #007055; /* Set text color */
   /* Gradient with three colors */
   margin: 0; /*Remove default margin */
-
+  align-items: center;
   overflow: hidden; /* Hide any overflow */
 }
 

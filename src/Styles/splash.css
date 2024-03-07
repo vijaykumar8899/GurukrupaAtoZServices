@@ -1,0 +1,22 @@
+.shape {
+  height: 50px;
+  width: 50%;
+  margin: 0 atu;
+  border: 2px solid red;
+}
+
+.splash {
+  position: absolute;
+  top: -50%; /* Position the splash above the container */
+  left: -50%; /* Position the splash to the left of the container */
+  width: 50%; /* Make the splash wider than the container */
+  height: 200%; /* Make the splash taller than the container */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 0%,
+    red 80%
+  );
+  border-radius: 50%; /* Make the splash circular */
+  animation: splash 2s linear infinite; /* Apply animation */
+  z-index: -1; /* Move the splash behind the container content */
+}

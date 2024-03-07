@@ -152,6 +152,7 @@ nav {
 
   .our-services-heading {
     font-size: 20px;
+    line-height: 1;
   }
 
   #home {
@@ -172,7 +173,7 @@ nav {
   }
 
   header {
-    width: 90%;
+    width: 95%;
   }
 }
 

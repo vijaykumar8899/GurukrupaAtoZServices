@@ -1,22 +1,8 @@
-/* contactMe.css */
-
 .youtube-Display-container {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.youtube-container p {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.youtube-container {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
   width: 80%;
   margin: 0 auto;
-  /* border: 2px solid green; */
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .youtube-video-row {

@@ -26,6 +26,7 @@ function App() {
 
         <OurServices />
         <Bio />
+        <div className="space"></div>
         <AtoZDifference />
         <YoutubeDisplayComponent />
         <ScrollUpButton />

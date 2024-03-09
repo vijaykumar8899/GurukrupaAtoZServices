@@ -2,7 +2,6 @@ import Container from "./container";
 import "../Styles/main.css";
 import "../Styles/container.css";
 
-
 function OurServices() {
   const additionalInfo = {
     Insurace: [
@@ -58,7 +57,7 @@ function OurServices() {
   };
   return (
     <div id="our-services">
-      <h2 className="our-services-heading">Our Services</h2>
+      <h2 className="sub-heading">Our Services</h2>
       <div className="our-services-div">
         <div className="container-row">
           <Container

@@ -19,25 +19,16 @@
   display: none;
   position: absolute;
   top: calc(110%); /* Position it just below the container */
-  left: 0%; /* Center horizontally */
   transform: translateX(-50%);
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* semi-transparent white background */
-  border: 2px solid #358e8e; /* border color */
-  border-radius: 5px;
-  padding: 10px;
-  width: 200px; /* Adjust width as needed */
-  z-index: 1; /* Ensure it's above the container */
+  color: #358e8e;
+
+  width: 170px; /* Adjust width to move hover text to right or left */
   text-align: left; /* Align text to the left */
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .scroll-to-top-button:hover .scrollToTop-text {
-  background-color: #358e8e;
+  /* background-color: #358e8e; */
   display: block;
 }
 

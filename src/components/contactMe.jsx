@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  FaPhone,
-  FaWhatsapp,
-  FaEnvelope,
-  FaInstagram,
-  FaFacebook,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaPhone, FaWhatsapp, FaFacebook, FaYoutube } from "react-icons/fa";
 import "../Styles/contactMe.css";
 
 const ContactMe = () => {
@@ -30,7 +23,7 @@ const ContactMe = () => {
         </div>
 
         <a
-          className="single-contactme-link"
+          className="single-contactme-link email"
           href="mailto:example@example.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -38,12 +31,12 @@ const ContactMe = () => {
           <img
             src="assets/email.png"
             alt="email-icon"
-            style={{ width: "24px", height: "24px" }}
+            style={{ width: "24px", height: "24px", marginRight: "10px" }}
           />
 
           <span>example@example.com</span>
         </a>
-        <div className="contact-methods-row">
+        <div className="contact-methods-row instagram">
           <a
             href="https://www.instagram.com/ravikiranbanala/"
             target="_blank"
@@ -52,7 +45,7 @@ const ContactMe = () => {
             <img
               src="assets/insta.png"
               alt="insta-icon"
-              style={{ width: "24px", height: "24px" }}
+              style={{ width: "24px", height: "24px", marginRight: "10px" }}
             />
             <span>@ravikiranbanala</span>
           </a>

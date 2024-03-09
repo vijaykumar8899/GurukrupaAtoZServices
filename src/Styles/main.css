@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
 * {
-  padding: 0;
+  padding-top: 1px;
   margin: 0;
   box-sizing: border-box;
   font-family: "Titillium Web", sans-serif;
@@ -12,6 +12,7 @@
   --mainColorLight: #5767aa;
   --secondaryColor: #db2b39;
   --textColor: #eee;
+  background-color: #d3d3d3;
 }
 
 header {
@@ -70,7 +71,7 @@ nav {
   padding: 10px 0;
 }
 
-.our-services-heading {
+.sub-heading {
   font-size: 30px;
   color: #8cc5d7;
   -webkit-text-stroke: 1px black;
@@ -86,10 +87,10 @@ nav {
   width: 80%;
   margin: 0 auto;
   align-items: center;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   margin-top: 20px;
   margin-bottom: 20px;
+  box-shadow: 20px 20px 20px rgba(215, 27, 27, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .about-paragraph {
@@ -150,7 +151,7 @@ nav {
     margin-bottom: 20px;
   }
 
-  .our-services-heading {
+  .sub-heading {
     font-size: 20px;
     line-height: 1;
   }
@@ -159,7 +160,7 @@ nav {
     width: 95%;
     margin: 0 auto;
     align-items: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 20px 20px 20px rgba(215, 27, 27, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -182,7 +183,7 @@ nav {
     flex-direction: column;
   }
 
-  .our-services-heading {
+  .sub-heading {
     font-size: 20px;
   }
 }

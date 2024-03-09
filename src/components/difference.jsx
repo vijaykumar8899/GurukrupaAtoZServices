@@ -1,12 +1,12 @@
 import React from "react";
-import "../Styles/main.css";
+
 import DifferenceContainer2 from "./differenceContainer2";
 import DifferenceContainer1 from "./differenceContainer1";
 
 const Difference = () => {
   return (
     <div>
-      <h2 className="our-services-heading">
+      <h2 className="services-difference-heading">
         What Makes GurukrupaAtoZ Services Difference?
       </h2>{" "}
       <DifferenceContainer1

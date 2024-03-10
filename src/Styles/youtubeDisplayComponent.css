@@ -14,8 +14,9 @@
 .youtube-video-row {
   /* border: 2px solid #8cc5d7; */
   border-radius: 8px;
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
-  box-shadow: 20px 20px 20px rgba(215, 27, 27, 0.1);
+  box-shadow: 20px 20px 20px #8cc5d7;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--upperColor);;
   transition: transform 0.3s, box-shadow 0.3s;
   margin: 10px;
   overflow: hidden;

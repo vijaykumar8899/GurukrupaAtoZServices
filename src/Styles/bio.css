@@ -5,8 +5,9 @@
   border-radius: 50px;
   display: grid;
   place-items: center;
-  box-shadow: 20px 20px 20px rgba(215, 27, 27, 0.1);
+  box-shadow: 20px 20px 20px #8cc5d7;
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #d3d3d3;
   /* background-color: red; */
 }
 

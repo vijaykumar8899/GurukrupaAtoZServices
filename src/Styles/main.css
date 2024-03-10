@@ -8,11 +8,10 @@
 }
 
 :root {
-  --mainColor: #29335c;
-  --mainColorLight: #5767aa;
-  --secondaryColor: #db2b39;
+  --upperColor: #d3d3d3;
+  --shadowColor: #8cc5d7;
   --textColor: #eee;
-  background-color: #d3d3d3;
+  background-color: #f8f8ff;
 }
 
 header {
@@ -24,7 +23,7 @@ header {
   margin: 0 auto;
   border-radius: 10px;
   padding: 0 2rem;
-  background-color: var(--mainColor);
+  background-color: #29335c;
   color: var(--textColor);
 }
 
@@ -44,7 +43,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondaryColor);
+  color: #db2b39;
 }
 
 header .nav-btn {
@@ -75,6 +74,7 @@ nav {
   font-size: 30px;
   color: #8cc5d7;
   -webkit-text-stroke: 1px black;
+  margin-top: 10px;
 }
 
 .container-row {
@@ -89,8 +89,9 @@ nav {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 20px 20px 20px rgba(215, 27, 27, 0.1);
+  box-shadow: 20px 20px 20px #8cc5d7;
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--upperColor);
 }
 
 .about-paragraph {
@@ -127,7 +128,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: var(--mainColor);
+    background-color: var(#29335c);
     transition: 1s;
   }
 
@@ -152,7 +153,7 @@ nav {
   }
 
   .sub-heading {
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1;
   }
 
@@ -160,8 +161,9 @@ nav {
     width: 95%;
     margin: 0 auto;
     align-items: center;
-    box-shadow: 20px 20px 20px rgba(215, 27, 27, 0.1);
+    box-shadow: 20px 20px 20px #8cc5d7;
     transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--upperColor);
     margin-top: 20px;
     margin-bottom: 20px;
   }

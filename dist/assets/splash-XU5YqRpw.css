@@ -1,0 +1,1 @@
+.shape{height:50px;width:50%;margin:0 atu;border:2px solid red}.splash{position:absolute;top:-50%;left:-50%;width:50%;height:200%;background:radial-gradient(circle,#ffffff80,red 80%);border-radius:50%;animation:splash 2s linear infinite;z-index:-1}

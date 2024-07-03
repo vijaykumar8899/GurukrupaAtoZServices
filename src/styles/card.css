@@ -1,0 +1,135 @@
+.card-title {
+  margin: 0.5rem 5%;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #ccc; /* Light gray text color */
+  text-transform: capitalize;
+  text-shadow: 2px 2px 2px #000; /* Slightly larger text shadow for contrast */
+  border-bottom: 2px solid #666; /* Darker border color for contrast */
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.card-description span {
+  color: #fafafa;
+  font-weight: bold;
+  text-transform: lowercase;
+  letter-spacing: 0.1em; /* Slightly increased letter spacing */
+  font-family: "Verdana", sans-serif;
+}
+
+.card-container {
+  width: 19rem; /* Increased width for a more spacious look */
+  border-radius: 25px; /* Reduced border radius for a smoother appearance */
+  box-shadow: 0px 4px 1px #000000; /* Increased box shadow for depth */
+  display:flex;
+  flex-direction: column;
+  margin: 1rem auto; /* Center the card horizontally */
+  border: 2px solid #ffffff; /* White border for contrast */
+  background-color: rgba(0, 0, 0, 0.8); /* Darkened background for contrast */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.card-image {
+  border-radius: 25px 25px 0 0; /* Rounded corners only on top */
+}
+
+.card-description {
+  margin: 10px; /* Increased margin for better spacing */
+  color: #ffffff; /* White text color for contrast */
+  font-family: "Arial", sans-serif; /* Cleaner font */
+  font-size: 15px; /* Increased font size for better readability */
+  font-weight: 600; /* Slightly increased font weight for emphasis */
+  text-align: justify;
+  height: 120px; /* Increased height for better content visibility */
+  overflow-y: auto;
+  padding: 0;
+}
+
+/* Customizing scrollbar */
+.card-description::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar width */
+}
+
+.card-description::-webkit-scrollbar-track {
+  background: transparent; /* Transparent background */
+}
+
+.card-description::-webkit-scrollbar-thumb {
+  background: transparent; /* Transparent thumb */
+}
+
+.card-description::-webkit-scrollbar-thumb:hover {
+  background: transparent; /* Transparent thumb on hover */
+}
+
+.card-description li {
+  padding: 0.5rem; /* Increased padding for better spacing */
+  margin-bottom: 0.5rem; /* Increased margin for better separation */
+  border-radius: 10px; /* Slightly reduced border radius for a softer look */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Lightened background for contrast */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Lighter border for contrast */
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.1); /* Lighter shadow for contrast */
+  transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.card-description li:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Lighten the background on hover */
+}
+
+.card-btn {
+  text-align: center;
+  width: 80%;
+  height: 20px; /* Increased button height for better clickability */
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+  padding-top: 5px; /* Reduced border radius for a smoother appearance */
+
+  background-image: linear-gradient(
+    to bottom,
+    #58bae4,
+    #4a6b79,
+    #39c3c3
+  ); /* Gradient background for a vibrant look */
+  color: #ffffff;
+  font-size: 16px; /* Increased font size for emphasis */
+  text-decoration: none;
+  margin: 1px auto;
+  margin-bottom: 5px;
+
+  /* Center the button horizontally */
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transform transition for hover effects */
+}
+
+.card-btn:hover {
+  transform: translateY(-5px); /* Slight raise effect on hover */
+}
+
+/* @media screen and (max-width: 600px) {
+  .card-container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .card-image {
+    height: 100%;
+    width: 100%;
+  }
+} */

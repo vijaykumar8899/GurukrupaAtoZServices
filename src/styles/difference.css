@@ -1,0 +1,124 @@
+.difference-wrapper {
+  width: 100%;
+}
+
+.our-services-heading {
+  font-size: 32px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.difference-container {
+margin-left: 18px;
+  width:92%;
+  background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  border: 2px solid rgb(0, 49, 135); /* Add black border */
+}
+
+
+.difference-container:hover {
+  transform: translateY(-5px);
+}
+
+.explanation {
+  display:flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 80px;
+  margin-right: 20px;
+  margin-left: 0px;
+  color: #084992; /* Change color as needed */
+}
+
+.text-content{
+  display:flex;
+}
+
+.text-content h3 {
+  font-size: 30px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
+  
+  width: 490px;
+  
+  color: #000000; /* Dark grey for contrast */
+ 
+}
+
+.text-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  width: 500px;
+  font-weight: 600;
+  text-align:justify;
+  color: #4d4c4c; /* Light grey for contrast */
+  font-family: Arial, Helvetica, sans-serif; /* Clean and modern sans-serif font */
+}
+
+@media only screen and (max-width: 768px) {
+  .difference-wrapper {
+    width: 100%;
+  }
+ 
+
+  .text-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    width: 100%;
+    font-weight: 600;
+    text-align:justify;
+    color: #4d4c4c; /* Light grey for contrast */
+    font-family: Arial, Helvetica, sans-serif; /* Clean and modern sans-serif font */
+  }
+  .text-content h3 {
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  
+    
+    width: 300px;
+    
+    color: #000000; /* Dark grey for contrast */
+   
+  }
+  .text-content{
+    display:contents;
+  }
+  .explanation {
+    display:contents;
+    align-items: center;
+  }
+  .icon {
+    font-size: 70px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #084992; /* Change color as needed */
+  }
+  .difference-container {
+    margin-left: 18px; /* Adjust margin as needed */
+    max-width: 75%; /* Allow container to resize up to full width */
+    background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    border: 2px solid rgb(0, 49, 135); /* Add black border */
+  }
+    .our-services-heading {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+
+}

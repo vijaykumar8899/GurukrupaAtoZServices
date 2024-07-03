@@ -1,37 +1,45 @@
-import React, { Suspense, lazy } from "react";
+import React, { useEffect } from 'react';
 import "./App.css";
 import Navbar from "./components/navbar";
-import ScrollUpButton from "./components/scroll-up-button";
-
-// Lazy load other components
-const Title = lazy(() => import("./components/title"));
-const OurServices = lazy(() => import("./components/our-services"));
-const AboutUs = lazy(() => import("./components/about-us"));
-const Bio = lazy(() => import("./components/bio"));
-const AtoZDifference = lazy(() => import("./components/difference"));
-const ContactMe = lazy(() => import("./components/contactMe"));
-const Splash = lazy(() => import("./components/splash"));
-const YoutubeDisplayComponent = lazy(() =>
-  import("./components/youtubeDisplayComponent")
-);
+import AboutUs from "./components/about-us";
+import Services from "./components/services";
+import Bio from "./components/bio";
+import Difference from "./components/difference";
+import "@fortawesome/fontawesome-free/css/all.css";
+import YoutubeDisplayComponent from "./components/youtubeDisplayComponent";
+import ContactMe from "./components/contactMe";
+import Black from "./components/black";
+import { logEvent } from 'firebase/analytics';
+import { analytics } from './Analytics/firebaseConfig';
 
 function App() {
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const source = urlParams.get('utm_source');
+    const medium = urlParams.get('utm_medium');
+    const campaign = urlParams.get('utm_campaign');
+
+    if (source && medium && campaign) {
+      logEvent(analytics, 'campaign_details', {
+        source,
+        medium,
+        campaign,
+      });
+    }
+  }, []);
+
+
   return (
     <React.Fragment>
       <Navbar />
-
-      <Suspense fallback={<div>Loading...</div>}>
-        <Title />
-        <AboutUs />
-
-        <OurServices />
-        <Bio />
-        <div className="space"></div>
-        <AtoZDifference />
-        <YoutubeDisplayComponent />
-        <ScrollUpButton />
-        <ContactMe />
-      </Suspense>
+      <Services />
+      <AboutUs />
+      <Difference />
+      <Bio />
+      <YoutubeDisplayComponent />
+      <ContactMe />
+      {/* <Black/> */}
     </React.Fragment>
   );
 }

@@ -1,42 +1,25 @@
-import "../Styles/bio.css";
-import Scroll from "../HelperFunctions/scroll";
+import React from "react";
+import "../styles/bio.css";
+import AuthorPhoto from "/assets/biofix.png"; // Import the author photo
 
 const Bio = () => {
-  const handleContactClick = () => {
-    Scroll.scrollToElementById("contact-me-container");
-  };
-  return (
-    <div className="bio" id="bio">
-      <div className="row">
-        <div className="imgWrapper">
-          <img src="assets\ravikiranimage1.jpg" alt="bio-img-ravikiran-garu" />
+    return (
+        <div className="bio-container">
+            <div className="left-half">
+                <div className="author-photo">
+                    <img src={AuthorPhoto} alt="Author" />
+                </div>
+            </div>
+            <div className="right-half">
+                <div className="author-info">
+                    <h2 className="author-name">RAVI KIRAN BANALA</h2>
+                    <p className="author-description">
+                    The person who came up with the idea for GurukrupaAtoZServices is really focused on changing how folks get important things done. They made this cool platform to make things like insurance, finding jobs, buying houses, and shopping online way easier. And it's not just about making money for them - they also do a lot to help out their community and give back to people in need. They're all about spreading good vibes and making the world a better place through GurukrupaAtoZServices.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div className="contentWrapper">
-          <div className="content">
-            {/* <span className="textWrapper">
-              <span>Ravi Kiran Banala</span>
-            </span> */}
-            <h2>Ravi Kiran Banala</h2>
-            <p>
-              The visionary behind <strong>GurukrupaAtoZServices</strong>, is
-              dedicated to transforming how people access essential services.
-              They founded this innovative platform to streamline insurance, job
-              placement, real estate, and digital shopping solutions. Beyond
-              business, he is known for community service and philanthropy,
-              driving GurukrupaAtoZServices' mission to make a positivity.
-            </p>
-            <a
-              className="contact-scroll-button"
-              href="#contactMe"
-              onClick={handleContactClick}
-            >
-              Contact
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Bio;

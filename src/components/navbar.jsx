@@ -1,80 +1,86 @@
-import { useEffect, useRef, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import "../Styles/main.css";
+import React, { useEffect, useState } from "react";
+import "../styles/navbar.css";
+import navImage from "/assets/navfix1.png"; // Import the image
 import Scroll from "../HelperFunctions/scroll";
+import { logEvent } from 'firebase/analytics';
+import { analytics } from '../Analytics/firebaseConfig';
 
-function Navbar() {
-  const navRef = useRef();
-  const [isNavOpen, setIsNavOpen] = useState(false); // Track whether the navbar is open or closed
+const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
 
   const handleClick = (id) => {
+    const scrollName = `${id} scroll`;
+
+    // Log an event with Firebase Analytics
+    logEvent(analytics, 'scroll_name', {
+      scroll_name: scrollName
+    });
+    console.log(scrollName);
+
     Scroll.scrollToElementById(id);
-    setIsNavOpen(false); // Close the navbar after navigating to the section
+    setShowMenu(false); // Close menu after clicking an item
   };
-
-  const showNavbar = () => {
-    setIsNavOpen(!isNavOpen); // Toggle the state of isNavOpen
-  };
-
-  // Handle header show/hide animation depending on the scroll direction
-  const headerRef = useRef(null);
 
   useEffect(() => {
-    let prevScrollPos = window.scrollY;
+    var navbar = document.getElementById("navbar");
+    navbar.style.backgroundImage = `url(${navImage})`; // Set background image
 
-    // Handle scroll events
-    const handleScroll = () => {
-      const currScrollPos = window.scrollY;
-      const currHeaderElement = headerRef.current;
-
-      if (!currHeaderElement) return;
-
-      if (prevScrollPos > currScrollPos)
-        currHeaderElement.style.transform = "translateY(0)";
-      else currHeaderElement.style.transform = "translateY(-200px)";
-
-      prevScrollPos = currScrollPos;
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setShowMenu(false); // Ensure menu is hidden when switching to desktop view
+      }
     };
 
-    // Set up listeners for the scroll event
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
-    // Remove listeners for the scroll event
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, []); // Empty dependency array ensures this effect runs only once, equivalent to componentDidMount
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
   return (
-    <header id="navbar">
-      <img className="left-context" src="assets/logo1.png" alt="logo" />
-      <div className="right-context">
-        <nav ref={navRef} className={isNavOpen ? "responsive_nav" : ""}>
-          <a onClick={() => handleClick("title")} href="/#">
-            Home
-          </a>
-          <a href="#about" onClick={() => handleClick("bio")}>
-            About
-          </a>
-          <a href="/#services" onClick={() => handleClick("our-services")}>
-            Services
-          </a>
-          <a
-            href="/#contact"
-            onClick={() => handleClick("contact-me-container")}
-          >
-            Contact
-          </a>
-          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <FaTimes />
-          </button>
-        </nav>
+    <div id="navbar" className="navbar">
+      <div className="appbar">
+        <div className="logo">
+          <img src="assets/logo1.png" alt="Logo" />
+        </div>
+        <div className="titles">
+          <button onClick={handleClick.bind(null, "navbar")}>Home</button>
+          <button onClick={handleClick.bind(null, "about-us")}>About</button>
+          <button onClick={handleClick.bind(null, "services")}>Services</button>
+          <button onClick={handleClick.bind(null, "contact-me-container")}>Contact</button>
+        </div>
+        <div className="mobile-menu-icon" onClick={toggleMenu}>
+          <div className={`bar ${showMenu ? "change" : ""}`}></div>
+          <div className={`bar ${showMenu ? "change" : ""}`}></div>
+          <div className={`bar ${showMenu ? "change" : ""}`}></div>
+        </div>
       </div>
-      <button className="nav-btn" onClick={showNavbar}>
-        <FaBars />
-      </button>
-    </header>
+      <div className="title">
+        <h1>A-Z SERVICES</h1>
+      </div>
+      <div className="para">
+        <p>
+          <strong className="highlighted-text">Gurukrupa AtoZ Services</strong> is your one-stop destination for a diverse array of essential services. Whether you're seeking expert guidance on Insurance, real estate transactions, digital shopping or job placement, our team of professionals is here to assist you. We also extend our support to cover your basic needs, from food supply consultancy to a wide range of social, cultural, and spiritual services, making A-Z Services the ultimate solution for all your needs.
+        </p>
+      </div>
+      <div className="connect-button">
+        <button onClick={handleClick.bind(null, "contact-me-container")}>CONNECT</button>
+      </div>
+      {showMenu && (
+        <div className="mobile-menu-items">
+          <button onClick={handleClick.bind(null, "navbar")}>Home</button>
+          <button onClick={handleClick.bind(null, "about-us")}>About</button>
+          <button onClick={handleClick.bind(null, "services")}>Services</button>
+          <button onClick={handleClick.bind(null, "contact-me-container")}>Contact</button>
+        </div>
+      )}
+    </div>
   );
-}
+};
 
 export default Navbar;

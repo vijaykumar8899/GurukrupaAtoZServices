@@ -1,0 +1,203 @@
+#contact-me-container {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  padding: 50px 20px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.contactme-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: 'Georgia', serif;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.contactme-heading:hover {
+  color: #f0f0f0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.contact-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.contact-card .icons {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-card:hover .icons {
+  color: #007bff;
+}
+
+.contact-card .phone {
+  color: #007bff;
+}
+
+.contact-card .whatsapp {
+  color: #25d366;
+}
+
+.contact-card .email {
+  color: #dd4b39;
+}
+
+.contact-card .instagram {
+  color: #e4405f;
+}
+
+.contact-card .facebook {
+  color: #3b5998;
+}
+
+.contact-card .youtube {
+  color: #ff0000;
+}
+
+.additional-info {
+  margin-top: 50px;
+}
+
+.info-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.info-section {
+  width: 100%;
+  max-width: 200px;
+}
+
+.info-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+}
+
+.info-section h3.about-us-heading {
+  font-size: 1rem; /* Adjusted font size for About Us */
+}
+
+.info-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-section ul li {
+  margin: 10px 0;
+}
+
+.info-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-section ul li a:hover {
+  color: #007bff;
+}
+
+.company-description-section {
+  text-align: left;
+}
+
+.company-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-methods {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .info-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-section {
+    width: 80%;
+  }
+  .contact-card a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  .contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .company-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    align-items: center;
+    text-align: center;
+  }
+  .info-section h3.about-us-heading {
+    font-size: 1.5rem;
+    text-align: center;
+    align-items: center; /* Adjusted font size for About Us */
+  }
+ 
+}

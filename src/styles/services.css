@@ -1,0 +1,12 @@
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #000000;
+}
+
+/* @media screen and (max-width: 600px) {
+  .services {
+    flex-direction: column;
+  }
+} */

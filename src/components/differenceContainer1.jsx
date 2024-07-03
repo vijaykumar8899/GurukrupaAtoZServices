@@ -1,22 +1,28 @@
-import React from "react";
-import "../Styles/differenceContainer.css";
+// DifferenceContainer.js
+import React from 'react';
+import PropTypes from 'prop-types';
+import '../styles/difference.css';
 
-const DifferenceContainer1 = ({ title = "", explanation = "" }) => {
+const DifferenceContainer = ({ title, explanation, icon }) => {
   return (
     <div className="difference-container">
       <div className="explanation">
-        <div className="text-with-arrow">
-          <h3>{title}</h3>
-          <img src="assets/Arrow_right.png" alt="Arrow_left" />
+        <div className="icon">
+          <i className={icon}></i>
         </div>
-        <div className="sizedBox"></div>
-
-        <p className="right-arrow-p">
-          {explanation}
-        </p>
+        <div className="text-content">
+          <h3>{title}</h3>
+          <p>{explanation}</p>
+        </div>
       </div>
     </div>
   );
 };
 
-export default DifferenceContainer1;
+DifferenceContainer.propTypes = {
+  title: PropTypes.string.isRequired,
+  explanation: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};
+
+export default DifferenceContainer;

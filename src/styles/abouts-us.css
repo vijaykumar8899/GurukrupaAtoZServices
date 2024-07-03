@@ -1,0 +1,156 @@
+/* General styles */
+body {
+  font-family: "Georgia", serif;
+  color: #000000;
+  font-weight: bolder;
+}
+
+/* Styling for MainAboutComponent */
+.MainAboutComponent {
+  margin-top: -90px;
+  margin-bottom: 20px; /* Center align */
+}
+
+.mainimage-content img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: -70px; /* Ensure image takes full width */
+}
+
+.maintext-content {
+  text-align: justify; /* Justify text for a polished look */
+  padding: 20px; /* Increase padding for better spacing */
+  font-size: 18px; /* Larger font size for readability */
+  line-height: 1.8; /* Increased line height for better legibility */
+  color: #000000;
+}
+
+/* Styling for text-image-container */
+.text-image-container, .image-text-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px; /* Center align and adjust margin */
+  height: auto;
+  margin-top: 20px; /* Remove fixed height */
+}
+
+.tm-text-content,
+.tm-image-content,
+.mt-text-content,
+.mt-image-content {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.tm-image-content img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: 20px 20px; /* Adjust margins for better spacing */
+}
+.mt-image-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* margin: 0px 0px; */
+  margin-right: 10px; 
+  margin-left: -30px;/* Adjust margins for better spacing */
+}
+
+
+/* Styling for our-services-heading */
+.our-services-heading123 {
+  font-family: "Georgia", serif;
+  font-size: 50px; /* Adjust font size for better fit */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333; /* Darken text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center; /* Center align the heading */
+  padding: 10px; /* Add padding for spacing */
+}
+
+/* Styling for space */
+.space {
+  margin-bottom: 100px; /* Adjust as needed */
+}
+
+.mt-text-content p {
+ 
+  margin-left: 20px; /* Adjust margins for better spacing */
+  font-size: 18px;
+  line-height: 1.6;
+  width: 100%; /* Adjust width as needed */
+  text-align: justify; /* Dark grey for contrast */
+  color: #000000;
+}
+.tm-text-content p{
+  margin-right: 20px; /* Adjust margins for better spacing */
+  font-size: 18px;
+  line-height: 1.6;
+  width: 100%; /* Adjust width as needed */
+  text-align: justify; /* Dark grey for contrast */
+  color: #000000;
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .text-image-container, .image-text-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    margin: 10px; /* Adjust margin for mobile view */
+  }
+
+  .tm-text-content, .tm-image-content, .mt-text-content, .mt-image-content {
+    flex-basis: 100%; /* Make each item take full width */
+  }
+
+  .tm-image-content img, .mt-image-content img {
+    margin: 0; /* Remove margins */
+    width: 100%; /* Adjust width for mobile view */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  
+  .tm-text-content p, .mt-text-content p {
+    margin: 10px 0; /* Adjust margins for better spacing */
+    font-size: 16px; /* Adjust font size for mobile view */
+    padding: 0 10px; /* Add padding for better spacing */
+  }
+
+  .our-services-heading {
+    font-size: 20px; /* Adjust font size for mobile view */
+  }
+  .maintext-content {
+    text-align: justify; /* Justify text for a polished look */
+    padding: 20px; /* Increase padding for better spacing */
+    font-size: 18px; /* Larger font size for readability */
+    line-height: 1.3; /* Increased line height for better legibility */
+    color: #000000;
+  }
+  .our-services-heading123 {
+    font-family: "Georgia", serif;
+    font-size: 40px; /* Adjust font size for better fit */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333; /* Darken text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 70px;
+    text-align: center; /* Center align the heading */
+    padding: 10px; /* Add padding for spacing */
+  }
+  .mainimage-content img {
+    max-width: 100%;
+    max-height: 110%;
+    margin-bottom: -70px; /* Ensure image takes full width */
+  }
+  
+}
